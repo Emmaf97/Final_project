@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import reactLogo from '../assets/react.svg';
 import '../styles/Card.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function CardLayout() {
   return (
