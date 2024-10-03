@@ -1,0 +1,35 @@
+.card{                           /* Putting a border around each card*/
+    border: 1px solid white;
+    opacity: 1;
+    border-radius: 20px !important;
+    border-top: 20px;
+ }  
+.card-col{                      /* Adding space between each card  */
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+.border{
+    border: 1px solid white;
+    border-radius: 20px;
+}
+/* Card.css */
+.imageresize {
+    height: 120px;              /* Set the desired height */
+    object-fit: contain;        /* Ensure the image covers the entire area */
+    width: 100%;                /* Set the width to 100% to fit the card */
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #212529;  /* Bootstrap's dark gray background */
+    color: white;                /* Set text color to white for contrast */
+    min-height: 100vh;          /* Ensure the root takes full height */
+  }
+
+body{
+    background-color: #212529 !important; 
+}
