@@ -1,0 +1,9 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #212529;  /* Bootstrap's dark gray background */
+    color: white;                /* Set text color to white for contrast */
+    min-height: 100vh;          /* Ensure the root takes full height */
+  }
