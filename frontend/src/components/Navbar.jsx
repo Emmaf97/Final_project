@@ -4,6 +4,8 @@ import Nav from "react-bootstrap/Nav";
 import "../styles/NavBar.css";
 import Navbar from "react-bootstrap/Navbar";
 
+
+
 function NavbarTemplate() {
   return (
     <>
@@ -30,7 +32,7 @@ function NavbarTemplate() {
             <Nav.Link as={Link} to="/folklore">
               Folkore
             </Nav.Link>
-            <Nav.Link as={Link} to="/tuatha">
+            <Nav.Link as={Link} to="/celticgods">
               Gods
             </Nav.Link>
             <Nav.Link as={Link} to="/modIreland">
