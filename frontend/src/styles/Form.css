@@ -1,0 +1,10 @@
+.form-floating{
+    color: #444141 !important;
+}
+.text-muted-custom{
+    color: white !important;
+}
+.form-spacing{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
