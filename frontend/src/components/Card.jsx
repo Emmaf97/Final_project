@@ -3,8 +3,14 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import '../styles/Card.css'
 
-{/* Creating function that will take in cardData(image, title, text and button if provided. 
-    It will only render the amount of cards created on the other pages. E.g. home has 6 cards with links to other pages. ) */ }
+{/* CardLayout component:
+
+  - This component accepts an array of card data (cardData) as a prop, where each item contains properties like image, title, text, and an optional button.
+  - The cardData array is mapped to dynamically render a set of Bootstrap Cards.
+  - Each card will display the provided image, title, text, and button (if the button exists).
+  - The component adapts to the number of cards passed from the parent component. For example, the Home page passes 6 cards, each linking to different pages.
+  - The layout adjusts responsively, displaying 1 card per row on smaller screens (xs), and 2 cards per row on medium screens (md).
+   */ }
 function CardLayout({ cardData }) {
   return (
     <Row xs={1} md={2} className="g-1">
