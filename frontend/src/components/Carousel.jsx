@@ -3,11 +3,12 @@ import Carousel from "react-bootstrap/Carousel";
 import img1 from "../images/Halloween.png";
 import img2 from "../images/Dracula.png";
 import img3 from "../images/Dullahan.png";
+import  "../styles/Carousel.css"
 
 function CarouselHeader() {
   return (
     <Carousel fade>
-      <Carousel.Item>
+      <Carousel.Item className="Carousel">
         <img
           className="d-block w-100"
           src={img1}
@@ -23,7 +24,7 @@ function CarouselHeader() {
           <p>the thinning veil between worlds and the magic of the unseen.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className="Carousel">
         <img
           className="d-block w-100"
           src={img2}
@@ -37,12 +38,12 @@ function CarouselHeader() {
           Bram Stoker, an Irishman, wrote Dracula, drawing inspiration from Irish and international myths and legends to create the iconic creature of the night</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className="Carousel">
         <img
           className="d-block w-100"
           src={img3}
           alt="First slide"
-          style={{ height: "50vh", objectFit: "contain" }}
+          style={{ height: "50vh", width: "90%", objectFit: "fill" }}
         />
 
         <Carousel.Caption>
