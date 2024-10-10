@@ -3,14 +3,18 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import "../styles/NavBar.css";
 import Navbar from "react-bootstrap/Navbar";
+import Col from 'react-bootstrap/Col';
+
 
 
 
 function NavbarTemplate() {
   return (
-    <>
+      <>
+          <Col xs={1} md={12} lg={12}>
       <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
+              <Container>
+                  
           <Navbar.Brand as={Link} to="/">
           <img
               src="../src/images/Logo_v1.png"
@@ -48,7 +52,8 @@ function NavbarTemplate() {
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+              </Navbar>
+              </Col>
     </>
   );
 }
