@@ -1,5 +1,4 @@
 import Carousel from "react-bootstrap/Carousel";
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
 import img1 from "../images/Halloween.png";
 import img2 from "../images/Dracula.png";
 import img3 from "../images/Dullahan.png";
@@ -43,7 +42,7 @@ function CarouselHeader() {
           className="d-block w-100"
           src={img3}
           alt="First slide"
-          style={{ height: "50vh", width: "90%", objectFit: "fill" }}
+          style={{ height: "50vh", width: "90%", objectFit: "contain" }}
         />
 
         <Carousel.Caption>
