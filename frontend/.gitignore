@@ -11,6 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
+Django_logo.png
+Python_logo.png
+React_logo.png
+.env
 
 # Editor directories and files
 .vscode/*
