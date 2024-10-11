@@ -7,37 +7,53 @@ import api from "../api.js";
 import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import LoadingIndicator from "./LoadingIndicator";
+import { Alert } from "react-bootstrap";
 
 function AuthForm({ route, method }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(null); 
   const navigate = useNavigate();
 
-  const name = method === "login" ? "Login" : "Register";
-
-  const handleSubmit = async (e) => {
-    setLoading(true);
-    e.preventDefault();
-
-    try {
-      const res = await api.post(route, { username, password });
-      if (method === "login") {
-        localStorage.setItem(ACCESS_TOKEN, res.data.access);
-        localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
-        navigate("/");
-      } else {
-        navigate("/login");
-      }
-    } catch (error) {
-      alert(error);
-    } finally {
-      setLoading(false);
-    }
-  };
+    const name = method === "login" ? "Login" : "Register";
+    
+    const handleSubmit = async (e) => {
+        setLoading(true);
+        e.preventDefault();
+    
+        try {
+            // Register or login the user
+            await api.post(route, { username, email, password });
+    
+            if (method === "register") {
+                // Automatically log the user in after successful registration
+                const loginRes = await api.post("/api/token/", { username, password });
+                localStorage.setItem(ACCESS_TOKEN, loginRes.data.access);
+                localStorage.setItem(REFRESH_TOKEN, loginRes.data.refresh);
+            } else if (method === "login") {
+                // For login, directly store the tokens from the response
+                const loginRes = await api.post("/api/token/", { username, password });
+                localStorage.setItem(ACCESS_TOKEN, loginRes.data.access);
+                localStorage.setItem(REFRESH_TOKEN, loginRes.data.refresh);
+            }
+    
+            setMessage({ type: "success", text: "Account Created!" });
+    
+            // Navigate after a short delay
+            setTimeout(() => navigate("/"), 2000);
+        } catch (error) {
+            console.error("Error:", error.response);
+            setMessage({ type: "danger", text: "Failed to Create Account." });
+        } finally {
+            setLoading(false);
+        }
+    };
+    
   return (
-    <div className="form-container form-spacing">
+      <div className="form-container form-spacing">
+        {message && <Alert variant={message.type}>{message.text}</Alert>} 
       <h1>{name}</h1>
       <Form onSubmit={handleSubmit}>
         <div className="border">
