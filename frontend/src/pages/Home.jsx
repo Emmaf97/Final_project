@@ -5,7 +5,9 @@ import homeImage from "../images/Logo_v1.png";
 function Home() {
     { }
     const homeCardData = [
-        { title: 'Login', text: 'Login to gain access to the Fé Community', image:  homeImage, button: <Link to="/login"><button>Login Here</button></Link>  },
+        { title: 'Login', text: 'Login to gain access to your Fé community account', image: homeImage, button: <Link to="/login"><button>Login Here</button></Link> },
+        { title: 'Register', text: 'Register an account to gain access to the Fé Community ', image: homeImage, button: <Link to="/register"><button>Sign Up</button></Link> },
+        { title: 'Threads', text: 'Community Forum page for all your mythical needs', image:  homeImage, button: <Link to="/thread"><button>Forum page</button></Link>  },
         { title: 'Explore', text: 'Discover Locations of Irish myths here.', image: homeImage, button: <Link to="/map"><button>Explore</button></Link>  },
         { title: 'Folklore', text: 'Discover ancient Irish Folklore', image: homeImage, button: <Link to="/folklore"><button>Discover</button></Link>  },
         { title: 'Modern Ireland', text: 'Explore how myths have shaped Modern Ireland.', image: homeImage, button: <Link to="/modireland"><button>Explore More</button></Link>  },
