@@ -9,7 +9,7 @@ import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import LoadingIndicator from "./LoadingIndicator";
 import { Alert } from "react-bootstrap";
 
-function AuthForm({ route, method }) {
+function AuthForm({ route, method, onSuccessfulAuth  }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -26,17 +26,28 @@ function AuthForm({ route, method }) {
         try {
             // Register or login the user
             await api.post(route, { username, email, password });
-    
+
+            setMessage({ type: "success", text: method === "register" ? "Account Created!" : "Successfully Logged In!" });
+            
             if (method === "register") {
                 // Automatically log the user in after successful registration
                 const loginRes = await api.post("/api/token/", { username, password });
                 localStorage.setItem(ACCESS_TOKEN, loginRes.data.access);
                 localStorage.setItem(REFRESH_TOKEN, loginRes.data.refresh);
+                // Refresh the page to update the UI
+                window.location.reload();
             } else if (method === "login") {
                 // For login, directly store the tokens from the response
                 const loginRes = await api.post("/api/token/", { username, password });
                 localStorage.setItem(ACCESS_TOKEN, loginRes.data.access);
                 localStorage.setItem(REFRESH_TOKEN, loginRes.data.refresh);
+                // Refresh the page to update the UI
+                window.location.reload();
+                
+            }
+            // Notify parent component to fetch user info
+            if (onSuccessfulAuth) {
+                onSuccessfulAuth(); // This will call fetchUserInfo in the parent
             }
     
             setMessage({ type: "success", text: "Account Created!" });
@@ -50,7 +61,7 @@ function AuthForm({ route, method }) {
             setLoading(false);
         }
     };
-    
+
   return (
       <div className="form-container form-spacing">
         {message && <Alert variant={message.type}>{message.text}</Alert>} 
