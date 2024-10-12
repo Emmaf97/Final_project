@@ -28,13 +28,14 @@ function AuthForm({ route, method, onSuccessfulAuth  }) {
             await api.post(route, { username, email, password });
 
             setMessage({ type: "success", text: method === "register" ? "Account Created!" : "Successfully Logged In!" });
-            
+
             if (method === "register") {
                 // Automatically log the user in after successful registration
                 const loginRes = await api.post("/api/token/", { username, password });
                 localStorage.setItem(ACCESS_TOKEN, loginRes.data.access);
                 localStorage.setItem(REFRESH_TOKEN, loginRes.data.refresh);
                 // Refresh the page to update the UI
+                navigate("/")
                 window.location.reload();
             } else if (method === "login") {
                 // For login, directly store the tokens from the response
@@ -42,6 +43,7 @@ function AuthForm({ route, method, onSuccessfulAuth  }) {
                 localStorage.setItem(ACCESS_TOKEN, loginRes.data.access);
                 localStorage.setItem(REFRESH_TOKEN, loginRes.data.refresh);
                 // Refresh the page to update the UI
+                navigate("/")
                 window.location.reload();
                 
             }
