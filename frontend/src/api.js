@@ -13,8 +13,8 @@ api.interceptors.request.use(
         const token = localStorage.getItem(ACCESS_TOKEN);
 
         // Check if the URL is for authentication (register/login)
-        if (token && (config.url.endsWith("/api/user/register/") || config.url.endsWith("/api/token/"))) {
-            config.headers.Authorization = `Bearer ${token}`;
+        if ((config.url.endsWith("/api/user/register/") || config.url.endsWith("/api/token/"))) {
+            return config;
         }
 
         // Skip token for the contact form

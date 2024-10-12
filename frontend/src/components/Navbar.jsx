@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ACCESS_TOKEN,REFRESH_TOKEN } from "../constants";
+import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -10,14 +10,14 @@ import Navbar from "react-bootstrap/Navbar";
 import Col from "react-bootstrap/Col";
 
 function NavbarTemplate() {
-    const { user, loading } = useUserInfo();
-    const navigate = useNavigate();
+  const { user, loading } = useUserInfo();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem(ACCESS_TOKEN);
-      localStorage.removeItem(REFRESH_TOKEN);
-      // Refresh the page to update the UI
-      window.location.reload();
+    localStorage.removeItem(REFRESH_TOKEN);
+    // Refresh the page to update the UI
+    window.location.reload();
   };
 
   return (
@@ -57,25 +57,35 @@ function NavbarTemplate() {
               </Nav.Link>
             </Nav>
             <Navbar.Collapse className="justify-content-end">
-  {loading ? (
-    <div>Loading...</div> // Loading state while fetching user info
-  ) : user ? (
-    <>
-      <Navbar.Text>Signed in as: {user.username}</Navbar.Text> {/* Show username if authenticated */}
-      <Button variant="outline-danger" onClick={handleLogout}>Logout</Button>
-    </>
-  ) : (
-    <>
-      {/* Show login and register buttons if not authenticated */}
-      <Link to="/login">
-        <Button variant="outline-primary">Login</Button>
-      </Link>
-      <Link to="/register">
-        <Button variant="outline-secondary" className="ml-2">Register</Button>
-      </Link>
-    </>
-  )}
-</Navbar.Collapse>
+              {loading ? (
+                <div>Loading...</div> // Loading state while fetching user info
+              ) : user ? (
+                <>
+                  <Navbar.Text>Signed in as: {user.username}</Navbar.Text>{" "}
+                  {/* Show username if authenticated */}
+                  <Button variant="outline-danger" onClick={handleLogout}>
+                    Logout
+                  </Button>
+                  <Link to="/profile">
+                    <Button variant="outline-secondary" className="ml-2">
+                      Profile
+                    </Button>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  {/* Show login and register buttons if not authenticated */}
+                  <Link to="/login">
+                    <Button variant="outline-primary">Login</Button>
+                  </Link>
+                  <Link to="/register">
+                    <Button variant="outline-secondary" className="ml-2">
+                      Register
+                    </Button>
+                  </Link>
+                </>
+              )}
+            </Navbar.Collapse>
           </Container>
         </Navbar>
       </Col>
