@@ -7,3 +7,7 @@
     color: white;                /* Set text color to white for contrast */
     min-height: 100vh;          /* Ensure the root takes full height */
   }
+
+.btn{
+    margin: 5px;
+}
