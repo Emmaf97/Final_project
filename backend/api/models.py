@@ -17,4 +17,8 @@ class Contact(models.Model):
     lname = models.CharField(max_length=20)
     email = models.EmailField()
     content = models.TextField()
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    profile_image = models.ImageField(default='default.png', upload_to='profile_images/')
     
