@@ -19,6 +19,8 @@ class Contact(models.Model):
     content = models.TextField()
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_image = models.ImageField(default='default.png', upload_to='profile_images/')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
+    profile_image = models.ImageField(default='default.png', upload_to='profile_images/',blank=True, null=True)
+    def __str__(self):
+        return self.user.username
     

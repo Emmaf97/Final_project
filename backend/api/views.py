@@ -56,11 +56,14 @@ class CreateContactView(generics.CreateAPIView):
     
 class ProfileView(generics.RetrieveAPIView):
     queryset = User.objects.all()
-    serializer_class = UserSerializer
+    serializer_class = ProfileSerializer
     permission_classes = [IsAuthenticated]
 
     def get_object(self):
-        return self.request.user
+        user = self.request.user
+        profile = user.profile  # Assuming user has a related profile
+        print("Returning profile data:", profile)  # Debugging log
+        return profile
     
 class ProfileUpdateView(generics.RetrieveUpdateAPIView):
     queryset = Profile.objects.all()
@@ -68,13 +71,6 @@ class ProfileUpdateView(generics.RetrieveUpdateAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_object(self):
+        # Return the profile related to the authenticated user
         return self.request.user.profile
-
-    def perform_update(self, serializer):
-        # Handle file upload if it exists
-        if self.request.FILES.get('profile_image'):
-            serializer.validated_data['profile_image'] = self.request.FILES['profile_image']
-        instance = serializer.save()
-        # Return the updated instance
-        return instance
         

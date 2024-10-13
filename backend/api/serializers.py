@@ -7,7 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ["id", "username", "email", "password"]
         # Password should only be written when creating/updating
-        extra_kwargs = {"password": {"write_only": True}}
+        extra_kwargs = {"password": {"write_only": True , "required": False}}
         
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
@@ -37,23 +37,29 @@ class ContactSerializer(serializers.ModelSerializer):
 
 
 class ProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer()  # Use UserSerializer for nested user data
+    # Directly expose user fields in the ProfileSerializer
+    username = serializers.CharField(source='user.username', required=False)
+    email = serializers.EmailField(source='user.email', required=False)
+    profile_image = serializers.ImageField(required=False)
 
     class Meta:
         model = Profile
-        fields = ['user', 'profile_image']  # Include profile-specific fields
+        fields = ['username', 'email', 'profile_image']
 
     def update(self, instance, validated_data):
-        user_data = validated_data.pop('user', None)
-    # Update profile image if it exists
+        user_data = validated_data.pop('user', {})
+    
+        # Update user fields
+        user = instance.user
+        if 'username' in user_data:
+            user.username = user_data['username']
+        if 'email' in user_data:
+            user.email = user_data['email']
+        user.save()
+
+        # Update profile fields
         instance.profile_image = validated_data.get('profile_image', instance.profile_image)
         instance.save()
-
-        if user_data:
-            # Update user fields using the UserSerializer's update method
-            user_serializer = UserSerializer(instance.user, data=user_data)
-            if user_serializer.is_valid(raise_exception=True):
-                user_serializer.save()
-
+    
         return instance
         
