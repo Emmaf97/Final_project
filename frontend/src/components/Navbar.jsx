@@ -71,6 +71,11 @@ function NavbarTemplate() {
                       Profile
                     </Button>
                   </Link>
+                  <Link to="/post">
+                    <Button variant="outline-secondary" className="ml-2">
+                      Posts
+                    </Button>
+                  </Link>
                 </>
               ) : (
                 <>

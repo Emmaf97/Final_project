@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import ModernIreland from './pages/ModernIreland';
-import Post from './components/Post';
+import PostsPage from './pages/PostsPage';
 import CelticGods from './pages/CelticGods';
 import Folklore from './pages/Folklore';
 import Myths from './pages/Myths';
@@ -27,8 +27,9 @@ function App() {
           <Routes>
          {/* Default route to login */}
               <Route path="/" element={<Navigate to="/home" />} />
-              <Route path="/post" element={<ProtectedRoute> <Post /> </ProtectedRoute>} />
-            <Route path="/profile" element={<ProtectedRoute> <ProfilePic /> </ProtectedRoute>} />
+              <Route path="/post" element={<ProtectedRoute> <PostsPage /> </ProtectedRoute>} />
+              <Route path="/profile" element={<ProtectedRoute> <ProfilePic /> </ProtectedRoute>} />
+              {/* <Route path="/thread" element={<ProtectedRoute> <Thread /> </ProtectedRoute>} /> */}
         
             {/* Other routes */}
             <Route path="/login" element={<Login />} />
