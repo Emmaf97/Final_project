@@ -24,25 +24,25 @@ function ProfileUpdate() {
   // Fetch user info on mount
   useEffect(() => {
     const fetchUserData = async () => {
-        const token = localStorage.getItem(ACCESS_TOKEN);
-        if (token) {
-            try {
-                const response = await axios.get("/api/profile/", {
-                    headers: { Authorization: `Bearer ${token}` },
-                });
-                // Set user data directly
-                setUser(response.data);
-                // Set individual states if needed
-                setUsername(response.data.username);
-                setEmail(response.data.email);
-                setProfileImage(response.data.profile_image); // Ensure this matches your backend field
-            } catch (error) {
-                console.error("Failed to fetch user data", error);
-            }
+      const token = localStorage.getItem(ACCESS_TOKEN);
+      if (token) {
+        try {
+          const response = await axios.get("/api/profile/", {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+          // Set user data directly
+          console.log(response);
+          setUser(response.data || {});
+          setUsername(response.data.username || ""); // Set default empty string
+          setEmail(response.data.email || ""); // Set default empty string
+          setProfileImage(response.data.profile_image || img1); // Fallback image
+        } catch (error) {
+          console.error("Failed to fetch user data", error);
         }
+      }
     };
     fetchUserData();
-}, []);
+  }, []);
 
   const handleImageChange = (e) => {
     setProfileImage(e.target.files[0]);
@@ -54,10 +54,11 @@ function ProfileUpdate() {
     setLoading(true);
     e.preventDefault();
     const formData = new FormData();
-    formData.append("username", username);
+    formData.append("username", username); // Should match your serializer fields
     formData.append("email", email);
     if (profileImage) formData.append("profile_image", profileImage);
-  
+    if (profileImage) formData.append("profile_image", profileImage);
+
     try {
       const token = localStorage.getItem(ACCESS_TOKEN);
       console.log("Token", token);
@@ -72,20 +73,9 @@ function ProfileUpdate() {
         });
         console.log("After Patch");
         console.log("Response:", response.data); // Log the response for debugging
-        
-        // Update the user state with the new data from response
-        // setUser({
-        //     ...user,
-        //     username,
-        //     email,
-        //     profile_image: response.data.profile_image, // Ensure this points to the new image
-        //   });
-        
-          setMessage("Profile updated successfully!");
-          const res = await axios.get("/api/profile/", {
-            headers: { Authorization: `Bearer ${token}` },
-        });
-        setUser(res.data);
+
+        setMessage("Profile updated successfully!");
+        await fetchUserData();
       }
     } catch (error) {
       setMessage("Failed to update profile.");
@@ -100,7 +90,7 @@ function ProfileUpdate() {
       <Row className="d-flex justify-content-center align-items-center">
         <Col xs={6} md={3}>
           <Image
-            src={user.profile_image ? user.profile_image : img1 }
+            src={user.profile_image ? user.profile_image : img1}
             alt="Profile"
             thumbnail
             roundedCircle
@@ -153,10 +143,14 @@ function ProfileUpdate() {
               {loading ? "Updating..." : "Update"}
             </Button>
             {message && (
-  <Alert variant={message.includes("success") ? "success" : "danger"} dismissible onClose={() => setMessage("")}>
-    {message}
-  </Alert>
-)}
+              <Alert
+                variant={message.includes("success") ? "success" : "danger"}
+                dismissible
+                onClose={() => setMessage("")}
+              >
+                {message}
+              </Alert>
+            )}
           </div>
         </Form>
       </Row>
