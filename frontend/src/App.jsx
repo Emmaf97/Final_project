@@ -3,7 +3,7 @@ import ProfilePic from './components/Profile';
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
-import ModernIreland from './pages/ModernIreland';
+// import ModernIreland from './pages/ModernIreland';
 import PostsPage from './pages/PostsPage';
 import CelticGods from './pages/CelticGods';
 import Folklore from './pages/Folklore';
@@ -35,7 +35,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/myths" element={<Myths />} />
             <Route path="/folklore" element={<Folklore />} />
-            <Route path="/modireland" element={<ModernIreland />} />
+            {/* <Route path="/modireland" element={<ModernIreland />} /> */}
             <Route path="/celticgods" element={<CelticGods />} />
             <Route path="/contact" element={<Contact /> } />
             <Route path="*" element={<NotFound />} />

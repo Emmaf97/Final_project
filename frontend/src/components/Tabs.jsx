@@ -13,8 +13,8 @@ function TabbedCard({ data, dataType }) {
 
   useEffect(() => {
     if (selectedItem) {
-      console.log("Currently Selected Item:", selectedItem);
-      console.log("Active Tab:", activeTab);
+    //   console.log("Currently Selected Item:", selectedItem);
+    //   console.log("Active Tab:", activeTab);
     }
   }, [selectedItem, activeTab]);
 
