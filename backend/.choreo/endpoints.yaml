@@ -6,9 +6,3 @@ endpoints:
     type: REST
     networkVisibility: Public
     context: /
-
-  - name: dependencies
-    runtime: python
-    build:
-      commands:
-        - pip install -r requirements.txt
