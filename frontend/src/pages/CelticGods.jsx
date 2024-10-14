@@ -1,8 +1,15 @@
+import TextLayout from "../components/TextLayout";
+import godsData from '../tuatha_de_dannan.json';
+import morriganImage from '../images/Morrigan.png';
+
 function CelticGods() {
   return (
     <>
-        <h1>Celtic Gods Page</h1>
-        <p>Testing Route Connections.</p>
+      <div>
+        <h1>Gods of Irish Mythology</h1>
+        {/* Pass the imported image and JSON data to the TextLayout component */}
+        <TextLayout image={morriganImage} data={godsData.gods} />
+      </div>
     </>
   );
 }
