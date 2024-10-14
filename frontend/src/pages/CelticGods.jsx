@@ -8,7 +8,7 @@ function CelticGods() {
       <div>
         <h1>Gods of Irish Mythology</h1>
         {/* Pass the imported image and JSON data to the TextLayout component */}
-        <TextLayout image={morriganImage} data={godsData.gods} />
+        <TextLayout image={morriganImage} data={godsData.gods} dataType="gods" />
       </div>
     </>
   );
