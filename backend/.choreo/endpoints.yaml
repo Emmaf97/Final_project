@@ -1,7 +1,7 @@
 version: 0.1
 
 endpoints:
-  - name: "REST API"
+  - name: "REST"
     port: 8000  # Specify the port for the REST API
     type: REST
     networkVisibility: Public
