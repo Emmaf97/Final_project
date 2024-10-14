@@ -34,7 +34,7 @@ function App() {
             {/* Other routes */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/map" element={<SimpleMap />} />
+            {/* <Route path="/map" element={<SimpleMap />} /> */}
             <Route path="/home" element={<Home />} />
             <Route path="/myths" element={<Myths />} />
             <Route path="/folklore" element={<Folklore />} />
