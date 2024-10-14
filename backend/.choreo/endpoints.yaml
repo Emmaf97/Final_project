@@ -7,10 +7,3 @@ endpoints:
     networkVisibility: Public
     context: /
   
-  - name: static
-    port: 8001  # Specify a port for static file serving
-    path: /static/*
-    type: STATIC
-    handler: static
-    static:
-      directory: ./dist/assets
