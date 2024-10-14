@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import { useUserInfo } from "../hooks/useUserInfo"; // Import the custom hook
-import "../styles/NavBar.css";
+import "../styles/Navbar.css";
 import Navbar from "react-bootstrap/Navbar";
 import Col from "react-bootstrap/Col";
 
