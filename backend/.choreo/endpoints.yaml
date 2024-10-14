@@ -2,21 +2,13 @@ version: 0.1
 
 endpoints:
   - name: "REST API"
-    port: 8000
+    port: 8000  # Specify the port for the REST API
     type: REST
     networkVisibility: Public
     context: /
-
-  - name: api
-    path: /api
-    type: HTTP
-    methods:
-      - POST
-      - GET
-      - OPTIONS
-    handler: my_app.api
   
   - name: static
+    port: 8001  # Specify a port for static file serving
     path: /static/*
     type: STATIC
     handler: static
