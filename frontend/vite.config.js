@@ -13,8 +13,6 @@ export default defineConfig({
   },
   server: {
     historyApiFallback: true, // This ensures that React Router works correctly
-    proxy: {
-      '/api': 'http://127.0.0.1:8000',  // Redirects any requests to /api to Django backend
-    }
+   
   }
 })

@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
-import img1 from "./static/images/Halloween.png";
-import img2 from "./static/images/Dracula.png";
-import img3 from "./static/images/Dullahan.png";
+import img1 from "../images/Halloween.png";
+import img2 from "../images/Dracula.png";
+import img3 from "../images/Dullahan.png";
 import  "../styles/Carousel.css"
 
 function CarouselHeader() {
