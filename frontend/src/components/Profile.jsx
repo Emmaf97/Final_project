@@ -11,7 +11,7 @@ import img1 from "../images/Dullahan.png";
 import { ACCESS_TOKEN } from "../constants";
 import axios from "axios";
 import "../styles/App.css";
-import "../styles/form.css";
+import "../styles/Form.css";
 
 function ProfileUpdate() {
   const [username, setUsername] = useState("");
