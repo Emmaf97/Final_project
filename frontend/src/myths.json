@@ -11,7 +11,7 @@
         "Defended Ulster single-handedly against the armies of queen Medb of Connacht in the Táin Bó Cúailnge ('Cattle Raid of Cooley').",
         "Cú Chulainn dies in battle, binding himself to a standing stone to die on his feet."
       ],
-        "image": "/static/images/Cu_chulainn.png"
+        "image": "./static/images/Cu_chulainn.png"
     },
     {
       "name": "Children of Lír",
@@ -23,7 +23,7 @@
         "The curse can only be broken upon the marriage of Lairgenn and Deoch, leading to a heartbreaking conclusion when they regain human form.",
         "The children ultimately perish after being baptized, showcasing themes of love, loss, and transformation."
       ],
-      "image": "/static/images/Children_of_Lir.png"
+      "image": "./static/images/Children_of_Lir.png"
     },
     {
       "name": "Oisín of Tír na nÓg",
@@ -34,7 +34,7 @@
         "Niamh warns him never to touch the ground upon his return to Ireland, but upon arriving, he discovers that 300 years have passed.",
         "When he falls from the horse and touches the ground, he instantly ages and dies, illustrating the themes of love, time, and loss."
       ],
-      "image": "/static/images/Oisin.png"
+      "image": "./static/images/Oisin.png"
     }
   ]
 }

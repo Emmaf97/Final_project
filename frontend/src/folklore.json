@@ -9,7 +9,7 @@
         "As part of the terms of their surrender to the Milesians, the Tuatha Dé Danann agreed to retreat and dwell underground.",
         "In later interpretations, each tribe of the Tuatha Dé Danann was given its own mound."
       ],
-      "image": "/static/images/Irish_Faeries.png",
+      "image": "./static/images/Irish_Faeries.png",
       "appearance": [
         "The aos sí are generally described as stunningly beautiful, though they can also be terrible and hideous."
       ],
@@ -37,7 +37,7 @@
         "A banshee is a female spirit in Irish folklore who heralds the death of a family member, usually by screaming, wailing, shrieking, or keening.",
         "Her name is linked to the mythologically important tumuli or 'mounds' (sídhe) found across the Irish countryside."
       ],
-      "image": "/static/images/Banshee.png",
+      "image": "./static/images/Banshee.png",
       "appearance": [
         "Banshees are often depicted as pale women with long hair, wearing a grey or white gown."
       ],
@@ -61,7 +61,7 @@
         "The Dullahan is a headless horseman, depicted in Irish folklore as a terrifying figure, often riding a black horse, carrying his own head.",
         "The Dullahan's severed head has a grotesque appearance, with pale, parchment-like skin stretched over the surface, and eyes that move erratically like meteors."
       ],
-      "image": "/static/images/Dullahan.png",
+      "image": "./static/images/Dullahan.png",
       "appearance": [
         "The Dullahan's severed head is often described as having pale skin with a macabre, terrifying expression."
       ],
