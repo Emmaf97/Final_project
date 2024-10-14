@@ -6,3 +6,19 @@ endpoints:
     type: REST
     networkVisibility: Public
     context: /
+
+  - name: api
+    path: /api
+    type: HTTP
+    methods:
+      - POST
+      - GET
+      - OPTIONS
+    handler: my_app.api
+  
+  - name: static
+    path: /static/*
+    type: STATIC
+    handler: static
+    static:
+      directory: ./dist/assets
