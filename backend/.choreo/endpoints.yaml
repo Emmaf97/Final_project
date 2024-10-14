@@ -6,4 +6,9 @@ endpoints:
     type: REST
     networkVisibility: Public
     context: /
-  
+  - name: static
+    port: 3000  # Specify the port for serving static files
+    path: /static/*
+    type: STATIC
+    static:
+      directory: ./dist/assets  # Ensure this path points to where your images are built

@@ -27,7 +27,7 @@ function NavbarTemplate() {
           <Container>
             <Navbar.Brand as={Link} to="/">
               <img
-                src="../src/images/Logo_v1.png"
+                src="/static/images/Logo_v1.png"
                 alt="Logo"
                 width="50"
                 height="50"

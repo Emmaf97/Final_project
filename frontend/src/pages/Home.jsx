@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import CardLayout from "../components/Card";
 import CarouselHeader from "../components/Carousel";
-import homeImage from "../images/Logo_v1.png";
+import homeImage from "/static/images/Logo_v1.png";
 function Home() {
     { }
     const homeCardData = [

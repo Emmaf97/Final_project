@@ -1,6 +1,6 @@
 import TextLayout from "../components/TextLayout";
 import godsData from '../tuatha_de_dannan.json';
-import morriganImage from '../images/Morrigan.png';
+import morriganImage from '/static/images/Morrigan.png';
 
 function CelticGods() {
   return (

@@ -13,7 +13,7 @@
         "Encourages warriors to battle",
         "Washes bloodstained clothes of those fated to die"
       ],
-      "image": "../src/images/Morrigan.png"
+      "image": "/static/images/Morrigan.png"
     },
    {
     "name": "Lugh",
@@ -27,7 +27,7 @@
       "His Weapons of choice are a Fiery spear, Sling stone and Hound named Failinis",
       "He is also known as the inventor of Fidchell (a board game), Ball games and Horse racing"
     ],
-    "image": "../src/images/Lugh.png"
+    "image": "/static/images/Lugh.png"
    },
    {
     "name": "Dagda",
@@ -43,7 +43,7 @@
       "He is also known to have a Magic harp called Uaithne, this harp will Will only play when called by its two bynames; can fly to Dagda when summoned",
       "He is married to the Morrigan and has six children Aengus, Brigit, Bodb Derg, Cermait, Aed, Midir"
     ],
-    "image": "../src/images/Dagda.png"
+    "image": "/static/images/Dagda.png"
    }
  ]
 }
