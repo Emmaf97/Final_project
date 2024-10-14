@@ -1,0 +1,40 @@
+{
+  "myths": [
+    {
+      "name": "Cú Chulainn",
+      "translation": "Coo Cull an",
+      "description": ["Cú Chulainn is an Irish warrior hero and demigod in the Ulster Cycle of Irish mythology, as well as in Scottish and Manx folklore.",
+        "He is believed to be an incarnation of the Irish god Lugh, who is also his father.",
+        "His mother is the mortal Deichtine, sister of king Conchobar mac Nessa.",
+        "He gained the name 'Cú Chulainn' after killing Culann's fierce guard dog in self-defense and offering to take its place until a replacement could be reared, becoming the 'Hound (cú) of Culann'.",
+        "He had a prophecy that 'His great deeds would give him everlasting fame but his life would be short'.",
+        "Defended Ulster single-handedly against the armies of queen Medb of Connacht in the Táin Bó Cúailnge ('Cattle Raid of Cooley').",
+        "Cú Chulainn dies in battle, binding himself to a standing stone to die on his feet."
+      ],
+        "image": "../src/images/Cu_chulainn.png"
+    },
+    {
+      "name": "Children of Lír",
+      "translation": "Children of Leer",
+      "description": [
+        "The Children of Lír is a tragic tale from Irish mythology that revolves around the transformation of Lir's children into swans.",
+        "After the death of Lir's first wife, Aoibh, his second wife Aoife grows jealous and curses the children to live as swans for 900 years.",
+        "They retain the power of speech and sing beautiful songs, becoming legends among the people.",
+        "The curse can only be broken upon the marriage of Lairgenn and Deoch, leading to a heartbreaking conclusion when they regain human form.",
+        "The children ultimately perish after being baptized, showcasing themes of love, loss, and transformation."
+      ],
+      "image": "../src/images/Children_of_Lir.png"
+    },
+    {
+      "name": "Oisín of Tír na nÓg",
+      "translation": "Ush sheen of Tear na Noag",
+      "description": [
+        "Oisín, a human hero, falls in love with Niamh, a woman of the Otherworld, who takes him to Tír na nÓg, the land of eternal youth, on a magical horse.",
+        "They share a deep bond, but Oisín becomes homesick after what seems like three years.",
+        "Niamh warns him never to touch the ground upon his return to Ireland, but upon arriving, he discovers that 300 years have passed.",
+        "When he falls from the horse and touches the ground, he instantly ages and dies, illustrating the themes of love, time, and loss."
+      ],
+      "image": "../src/images/Oisin.png"
+    }
+  ]
+}
