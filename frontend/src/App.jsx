@@ -1,6 +1,4 @@
 import './styles/App.css'
-import CardLayout from './components/Card';
-import SimpleMap from './pages/Map';
 import ProfilePic from './components/Profile';
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -34,7 +32,6 @@ function App() {
             {/* Other routes */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            {/* <Route path="/map" element={<SimpleMap />} /> */}
             <Route path="/home" element={<Home />} />
             <Route path="/myths" element={<Myths />} />
             <Route path="/folklore" element={<Folklore />} />
