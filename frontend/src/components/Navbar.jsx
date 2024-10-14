@@ -49,9 +49,9 @@ function NavbarTemplate() {
               <Nav.Link as={Link} to="/celticgods">
                 Gods
               </Nav.Link>
-              <Nav.Link as={Link} to="/modIreland">
+              {/* <Nav.Link as={Link} to="/modIreland">
                 Modern Ireland
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link as={Link} to="/contact">
                 Contact
               </Nav.Link>
