@@ -1,0 +1,49 @@
+{
+ "gods": [
+   {
+    "name": "The Morrigan",
+      "alternative_names": ["Mórrígan", "Danu", "Morrígu", "Mór-ríoghan"],
+      "translation": ["Great Queen", "Phantom Queen"],
+      "roles": ["Goddess of War", "Fate", "Sovereignty"],
+      "description": [
+        "The Morrígan is seen as a goddess of battle and war.",
+        "She is also seen as a guardian of the land and its people.",
+        "Foretelling doom, death, and victory in battle.",
+        "Appears as a crow (Badb)",
+        "Encourages warriors to battle",
+        "Washes bloodstained clothes of those fated to die"
+      ],
+      "image": "../src/images/Morrigan.png"
+    },
+   {
+    "name": "Lugh",
+    "alternative_names": ["Lug","Lú"],
+    "translation": ["Lew of the Long Hand"],
+    "roles": ["Warrior","King","Master Craftsman","Savior"],
+    "description": [
+      "Lugh is seen god of Skill and mastery in arts and crafts.",
+      "He is also associated with Oaths, truth, and law,Rightful kingship.",
+      "The Harvest Festival of Lughnasadh is named after him.",
+      "His Weapons of choice are a Fiery spear, Sling stone and Hound named Failinis",
+      "He is also known as the inventor of Fidchell (a board game), Ball games and Horse racing"
+    ],
+    "image": "../src/images/Lugh.png"
+   },
+   {
+    "name": "Dagda",
+    "alternative_names": ["In Dagda","An Daghdha","Eochu/Eochaid Ollathair","Ruad Rofhessa","Dáire"],
+    "translation": ["The Good God","The Great God","Horseman, Great Father","Mighty One of Great Knowledge"],
+    "roles": ["Father-figure","King of the Tuatha de Dannan","Druid"],
+    "description": [
+      "Dagda is depicted as a large bearded man or giant, often wearing a hooded cloak.",
+      "He is also associated with Fertility,Agriculture, Manliness and Strength,Magic,Druidry, and Wisdom,Life and Death,Weather and Crops,Time and Seasons",
+      "He is said to reside in Brú na Bóinne (Newgrange)",
+      "He wields a Magic Staff known as lorc, this staff kills with one end, brings to life with the other ",
+      "He also carries a cauldron called coire ansic that is magically enchanted to never run empty",
+      "He is also known to have a Magic harp called Uaithne, this harp will Will only play when called by its two bynames; can fly to Dagda when summoned",
+      "He is married to the Morrigan and has six children Aengus, Brigit, Bodb Derg, Cermait, Aed, Midir"
+    ],
+    "image": "../src/images/Dagda.png"
+   }
+ ]
+}
