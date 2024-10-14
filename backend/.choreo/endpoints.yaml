@@ -9,6 +9,6 @@ endpoints:
   - name: static
     port: 3000  # Specify the port for serving static files
     path: /static/*
-    type: GET
+    type: REST
     static:
       directory: ./dist/assets  # Ensure this path points to where your images are built
