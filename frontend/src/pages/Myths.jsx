@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import morriganImage from '/static/images/Morrigan.png'; // Update with your correct path
+import morriganImage from './static/images/Morrigan.png'; // Update with your correct path
 import mythJson from "../myths.json";
 import TextLayout from "../components/TextLayout";
 
