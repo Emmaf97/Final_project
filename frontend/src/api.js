@@ -1,10 +1,11 @@
 import axios from "axios";
 import { ACCESS_TOKEN } from "./constants";
 
-const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl = '/choreo-apis/finalproject/backend/v1/'
+
 
 const api = axios.create({
-    baseURL: apiUrl
+    baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : apiUrl
 });
 
 // Add a request interceptor
