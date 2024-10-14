@@ -1,7 +1,7 @@
 version: 0.1
 
 endpoints:
-  - name: "REST"
+  - name: "REST API"
     port: 8000  # Specify the port for the REST API
     type: REST
     networkVisibility: Public
@@ -9,6 +9,6 @@ endpoints:
   - name: static
     port: 3000  # Specify the port for serving static files
     path: /static/*
-    type: STATIC
+    type: GET
     static:
       directory: ./dist/assets  # Ensure this path points to where your images are built
