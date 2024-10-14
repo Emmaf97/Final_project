@@ -1,7 +1,7 @@
 import TextLayout from "../components/TextLayout";
 import React, { useEffect, useState } from 'react';
 import folkloreJson from '../folklore.json';
-import morriganImage from './static/images/Morrigan.png';
+import morriganImage from '../images/Morrigan.png';
 
 
 const Folklore = () => {
