@@ -8,7 +8,7 @@ import { useUserInfo } from "../hooks/useUserInfo"; // Import the custom hook
 import "../styles/Navbar.css";
 import Navbar from "react-bootstrap/Navbar";
 import Col from "react-bootstrap/Col";
-import logo from '../images/Logo_v1-D9nN3sqf.png';
+import logo from '../images/Logo_v1.png';
 
 function NavbarTemplate() {
   const { user, loading } = useUserInfo();
