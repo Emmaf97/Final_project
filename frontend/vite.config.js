@@ -8,6 +8,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         dir: 'dist',
+        assetsDir: 'assets',
       },
     },
   },
