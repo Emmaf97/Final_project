@@ -8,6 +8,7 @@ import { useUserInfo } from "../hooks/useUserInfo"; // Import the custom hook
 import "../styles/Navbar.css";
 import Navbar from "react-bootstrap/Navbar";
 import Col from "react-bootstrap/Col";
+import logo from '../images/Logo_v1.png';
 
 function NavbarTemplate() {
   const { user, loading } = useUserInfo();
@@ -27,7 +28,7 @@ function NavbarTemplate() {
           <Container>
             <Navbar.Brand as={Link} to="/">
               <img
-                src="../src/images/Logo_v1.png"
+                src={logo}
                 alt="Logo"
                 width="50"
                 height="50"
